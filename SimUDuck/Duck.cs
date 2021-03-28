@@ -1,18 +1,26 @@
-﻿using SimUDuck.Behaviours;
+﻿using System;
+using SimUDuck.Behaviours;
 using SimUDuck.Wrappers;
 
 namespace SimUDuck
 {
-    public class Duck
+    public abstract class Duck
     {
-        private IFlyBehaviour _flyBehaviour;
-        private IQuackBehaviour _quackBehaviour;
-
-        public Duck()
+         IFlyBehaviour _flyBehaviour;
+         IQuackBehaviour _quackBehaviour;
+         IConsole _console;
+        public Duck(IFlyBehaviour flyBehaviour, IQuackBehaviour quackBehaviour, IConsole console)
         {
-            _flyBehaviour = new FlyWithWings(new ConsoleWrapper());
-            _quackBehaviour = new NormalQuack();
+            _flyBehaviour = flyBehaviour;
+            _quackBehaviour = quackBehaviour;
+            _console = console;
         }
+
+        protected Duck()
+        {
+            _console = new ConsoleWrapper();
+        }
+
         public void Fly()
         {
             _flyBehaviour.Fly();
@@ -21,6 +29,11 @@ namespace SimUDuck
         public void Quack()
         {
             _quackBehaviour.Quack();
+        }
+
+        public void Swing()
+        {
+            _console.Write("All ducks float, even decoys!");
         }
     }
 }

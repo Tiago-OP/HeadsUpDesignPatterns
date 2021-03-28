@@ -1,6 +1,7 @@
 ﻿using System;
 using Moq;
 using NUnit.Framework;
+using SimUDuck.Behaviours;
 using SimUDuck.Wrappers;
 
 namespace SimUDuck.Tests
@@ -14,19 +15,17 @@ namespace SimUDuck.Tests
         }
 
         [Test]
-        public void Duck_should_fly()
+        public void Duck_swings()
         {
-            var duck = new Duck();
+            var consoleMock = new Mock<IConsole>();
+            var mockDuck = new Mock<Duck>(It.IsAny<IFlyBehaviour>(), It.IsAny<IQuackBehaviour>(), consoleMock.Object)
+            {
+                CallBase = true
+            };
 
-            Assert.DoesNotThrow(() => duck.Fly());
-        }
+            mockDuck.Object.Swing();
 
-        [Test]
-        public void Duck_should_quack()
-        {
-            var duck = new Duck();
-
-            Assert.DoesNotThrow(() => duck.Quack());
+            consoleMock.Verify(w => w.Write(It.Is<string>(s => s == "All ducks float, even decoys!")));
         }
     }
 }
