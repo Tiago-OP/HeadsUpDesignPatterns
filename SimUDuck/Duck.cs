@@ -38,5 +38,10 @@ namespace SimUDuck
         {
             _output.Write("All ducks float, even decoys!");
         }
+
+        public void SetFlyBehaviour(IFlyBehaviour behaviour)
+        {
+            _flyBehaviour = behaviour;
+        }
     }
 }
