@@ -10,7 +10,7 @@ namespace SimUDuck.Tests
         [Test]
         public void MuteQuack()
         {
-            var consoleMock = new Mock<IConsole>();
+            var consoleMock = new Mock<IOutput>();
             var muteQuack = new MuteQuack(consoleMock.Object);
 
             muteQuack.Quack();

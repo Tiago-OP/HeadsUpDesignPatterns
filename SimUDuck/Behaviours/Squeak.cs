@@ -4,19 +4,19 @@ namespace SimUDuck.Behaviours
 {
     public class Squeak : IQuackBehaviour
     {
-        private readonly IConsole _console;
+        private readonly IOutput _output;
 
         public Squeak()
         {
-            _console = new ConsoleWrapper();
+            _output = new ConsoleWrapper();
         }
-        public Squeak(IConsole console)
+        public Squeak(IOutput output)
         {
-            _console = console;
+            _output = output;
         }
         public void Quack()
         {
-            _console.Write("Squeak");
+            _output.Write("Squeak");
         }
     }
 }

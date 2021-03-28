@@ -8,20 +8,20 @@ namespace SimUDuck
     {
          IFlyBehaviour _flyBehaviour;
          IQuackBehaviour _quackBehaviour;
-         IConsole _console;
+         IOutput _output;
 
          public abstract void Display();
 
-        public Duck(IFlyBehaviour flyBehaviour, IQuackBehaviour quackBehaviour, IConsole console)
+        public Duck(IFlyBehaviour flyBehaviour, IQuackBehaviour quackBehaviour, IOutput output)
         {
             _flyBehaviour = flyBehaviour;
             _quackBehaviour = quackBehaviour;
-            _console = console;
+            _output = output;
         }
 
         protected Duck()
         {
-            _console = new ConsoleWrapper();
+            _output = new ConsoleWrapper();
         }
 
         public void Fly()
@@ -36,7 +36,7 @@ namespace SimUDuck
 
         public void Swing()
         {
-            _console.Write("All ducks float, even decoys!");
+            _output.Write("All ducks float, even decoys!");
         }
     }
 }

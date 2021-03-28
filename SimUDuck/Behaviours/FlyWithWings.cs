@@ -4,20 +4,20 @@ namespace SimUDuck.Behaviours
 {
     public class FlyNoWay : IFlyBehaviour
     {
-        private readonly IConsole _console;
-        public FlyNoWay(IConsole customConsole)
+        private readonly IOutput _output;
+        public FlyNoWay(IOutput customOutput)
         {
-            _console = customConsole;
+            _output = customOutput;
         }
 
         public FlyNoWay()
         {
-            _console = new ConsoleWrapper();
+            _output = new ConsoleWrapper();
         }
 
         public void Fly()
         {
-            _console.Write("I can't fly!!");
+            _output.Write("I can't fly!!");
         }
     }
 }

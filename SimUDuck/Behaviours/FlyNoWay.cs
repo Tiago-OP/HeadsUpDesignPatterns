@@ -4,20 +4,20 @@ namespace SimUDuck.Behaviours
 {
     public class FlyWithWings : IFlyBehaviour
     {
-        private readonly IConsole _console;
-        public FlyWithWings(IConsole customConsole)
+        private readonly IOutput _output;
+        public FlyWithWings(IOutput customOutput)
         {
-            _console = customConsole;
+            _output = customOutput;
         }
 
         public FlyWithWings()
         {
-            _console = new ConsoleWrapper();
+            _output = new ConsoleWrapper();
         }
 
         public void Fly()
         {
-            _console.Write("I'm flying!!");
+            _output.Write("I'm flying!!");
         }
     }
 }

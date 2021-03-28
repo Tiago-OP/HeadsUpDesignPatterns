@@ -10,15 +10,15 @@ namespace SimUDuck
 {
     public class MallardDuck : Duck
     {
-        private IConsole _console;
-        public MallardDuck(IConsole console) : base(new FlyWithWings(console), new NormalQuack(console), console)
+        private IOutput _output;
+        public MallardDuck(IOutput output) : base(new FlyWithWings(output), new NormalQuack(output), output)
         {
-            _console = console;
+            _output = output;
         }
 
         public override void Display()
         {
-            _console.Write("I'm a real Mallard duck");
+            _output.Write("I'm a real Mallard duck");
         }
     }
 }

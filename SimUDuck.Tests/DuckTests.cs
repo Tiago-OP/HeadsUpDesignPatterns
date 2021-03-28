@@ -17,7 +17,7 @@ namespace SimUDuck.Tests
         [Test]
         public void Duck_swings()
         {
-            var consoleMock = new Mock<IConsole>();
+            var consoleMock = new Mock<IOutput>();
             var mockDuck = new Mock<Duck>(It.IsAny<IFlyBehaviour>(), It.IsAny<IQuackBehaviour>(), consoleMock.Object)
             {
                 CallBase = true

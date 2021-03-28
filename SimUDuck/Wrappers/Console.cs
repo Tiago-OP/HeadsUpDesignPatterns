@@ -2,12 +2,12 @@
 
 namespace SimUDuck.Wrappers
 {
-    public interface IConsole
+    public interface IOutput
     {
         public void Write(string message);
     }
 
-    public class ConsoleWrapper : IConsole
+    public class ConsoleWrapper : IOutput
     {
         public void Write(string message)
         {

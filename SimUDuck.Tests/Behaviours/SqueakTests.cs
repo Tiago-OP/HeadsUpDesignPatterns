@@ -10,7 +10,7 @@ namespace SimUDuck.Tests
         [Test]
         public void Squeak()
         {
-            var consoleMock = new Mock<IConsole>();
+            var consoleMock = new Mock<IOutput>();
             var squeack = new Squeak(consoleMock.Object);
 
             squeack.Quack();

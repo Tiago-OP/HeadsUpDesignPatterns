@@ -10,7 +10,7 @@ namespace SimUDuck.Tests
         [Test]
         public void FlyNoWay()
         {
-            var consoleMock = new Mock<IConsole>();
+            var consoleMock = new Mock<IOutput>();
             var flyNoWay = new FlyNoWay(consoleMock.Object);
 
             flyNoWay.Fly();

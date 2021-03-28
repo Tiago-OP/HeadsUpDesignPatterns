@@ -14,16 +14,10 @@ namespace SimUDuck.Tests
     [TestFixture()]
     public class MallardDuckTests
     {
-        [Test]
-        public void MallardDuckTest()
-        {
-            Assert.Fail();
-        }
-
         [Test()]
         public void DisplayTest()
         {
-            var consoleMock = new Mock<IConsole>();
+            var consoleMock = new Mock<IOutput>();
             var duck = new MallardDuck(consoleMock.Object);
             
             duck.Display();
@@ -34,7 +28,7 @@ namespace SimUDuck.Tests
         [Test]
         public void Quack()
         {
-            var consoleMock = new Mock<IConsole>();
+            var consoleMock = new Mock<IOutput>();
             var duck = new MallardDuck(consoleMock.Object);
 
             duck.Quack();
@@ -45,7 +39,7 @@ namespace SimUDuck.Tests
         [Test]
         public void FlyWithWings()
         {
-            var consoleMock = new Mock<IConsole>();
+            var consoleMock = new Mock<IOutput>();
             var duck= new MallardDuck(consoleMock.Object);
 
             duck.Fly();
