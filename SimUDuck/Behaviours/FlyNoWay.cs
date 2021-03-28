@@ -2,22 +2,22 @@
 
 namespace SimUDuck.Behaviours
 {
-    public class FlyNoWay : IFlyBehaviour
+    public class FlyWithWings : IFlyBehaviour
     {
         private readonly IConsole _console;
-        public FlyNoWay(IConsole customConsole)
+        public FlyWithWings(IConsole customConsole)
         {
             _console = customConsole;
         }
 
-        public FlyNoWay()
+        public FlyWithWings()
         {
             _console = new ConsoleWrapper();
         }
 
         public void Fly()
         {
-            _console.Write("I can't fly!!");
+            _console.Write("I'm flying!!");
         }
     }
 }

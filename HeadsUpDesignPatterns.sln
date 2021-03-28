@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimUDuck", "SimUDuck\SimUDu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SymUDuck", "SymUDuck", "{9DC80398-AB37-4DD4-8D9F-BBBF1F1BDB05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimUDuck.Tests", "SimUDuck.Tests\SimUDuck.Tests.csproj", "{B9DB83FC-6BDC-4780-A549-2FDA6902FF99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimUDuck.Tests", "SimUDuck.Tests\SimUDuck.Tests.csproj", "{B9DB83FC-6BDC-4780-A549-2FDA6902FF99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

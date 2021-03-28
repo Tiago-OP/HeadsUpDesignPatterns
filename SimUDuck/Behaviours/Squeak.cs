@@ -2,21 +2,21 @@
 
 namespace SimUDuck.Behaviours
 {
-    public class MuteQuack : IQuackBehaviour
+    public class Squeak : IQuackBehaviour
     {
         private readonly IConsole _console;
 
-        public MuteQuack()
+        public Squeak()
         {
             _console = new ConsoleWrapper();
         }
-        public MuteQuack(IConsole console)
+        public Squeak(IConsole console)
         {
             _console = console;
         }
         public void Quack()
         {
-            _console.Write("<< Silence >>");
+            _console.Write("Squeak");
         }
     }
 }

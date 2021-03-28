@@ -9,6 +9,9 @@ namespace SimUDuck
          IFlyBehaviour _flyBehaviour;
          IQuackBehaviour _quackBehaviour;
          IConsole _console;
+
+         public abstract void Display();
+
         public Duck(IFlyBehaviour flyBehaviour, IQuackBehaviour quackBehaviour, IConsole console)
         {
             _flyBehaviour = flyBehaviour;
