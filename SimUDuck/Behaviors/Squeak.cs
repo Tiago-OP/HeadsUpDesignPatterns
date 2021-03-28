@@ -1,22 +1,22 @@
 ﻿using SimUDuck.Wrappers;
 
-namespace SimUDuck.Behaviours
+namespace SimUDuck.Behaviors
 {
-    public class MuteQuack : IQuackBehaviour
+    public class Squeak : IQuackBehaviour
     {
         private readonly IOutput _output;
 
-        public MuteQuack()
+        public Squeak()
         {
             _output = new ConsoleWrapper();
         }
-        public MuteQuack(IOutput output)
+        public Squeak(IOutput output)
         {
             _output = output;
         }
         public void Quack()
         {
-            _output.Write("<< Silence >>");
+            _output.Write("Squeak");
         }
     }
 }

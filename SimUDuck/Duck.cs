@@ -1,32 +1,46 @@
 ﻿using System;
-using SimUDuck.Behaviours;
+using SimUDuck.Behaviors;
 using SimUDuck.Wrappers;
 
 namespace SimUDuck
 {
     public abstract class Duck
     {
-         IFlyBehaviour _flyBehaviour;
-         IQuackBehaviour _quackBehaviour;
-         IOutput _output;
+         private IFlyBehaviour _flyBehaviour;
+         private readonly IQuackBehaviour _quackBehaviour;
+         private readonly IOutput _output;
+         private readonly IDuckCallBehaviour _duckCall;
 
          public abstract void Display();
 
-        public Duck(IFlyBehaviour flyBehaviour, IQuackBehaviour quackBehaviour, IOutput output)
+        protected Duck(IFlyBehaviour flyBehaviour, IQuackBehaviour quackBehaviour, IOutput output)
         {
             _flyBehaviour = flyBehaviour;
             _quackBehaviour = quackBehaviour;
             _output = output;
         }
 
-        protected Duck()
+        protected Duck(IFlyBehaviour flyBehaviour, IQuackBehaviour quackBehaviour, IDuckCallBehaviour duckCall, IOutput output)
         {
+            _flyBehaviour = flyBehaviour;
+            _quackBehaviour = quackBehaviour;
+            _output = output;
+            _duckCall = duckCall;
+        }
+
+        protected Duck(IDuckCallBehaviour duckCall)
+        {
+            _duckCall = duckCall;
             _output = new ConsoleWrapper();
         }
 
         public void Fly()
         {
             _flyBehaviour.Fly();
+        }
+        public void DuckCall()
+        {
+            _duckCall.DuckCall();
         }
 
         public void Quack()

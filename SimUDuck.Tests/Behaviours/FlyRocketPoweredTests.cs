@@ -1,14 +1,9 @@
-﻿using NUnit.Framework;
-using SimUDuck.Behaviours;
+﻿using Moq;
+using NUnit.Framework;
+using SimUDuck.Behaviors;
 using SimUDuck.Wrappers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Moq;
 
-namespace SimUDuck.Behaviours.Tests
+namespace SimUDuck.Tests.Behaviours
 {
     [TestFixture()]
     public class FlyRocketPoweredTests

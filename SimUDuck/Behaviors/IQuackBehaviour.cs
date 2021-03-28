@@ -1,4 +1,4 @@
-﻿namespace SimUDuck.Behaviours
+﻿namespace SimUDuck.Behaviors
 {
     public interface IQuackBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Moq;
 using NUnit.Framework;
-using SimUDuck.Behaviours;
+using SimUDuck.Behaviors;
 using SimUDuck.Wrappers;
 
 namespace SimUDuck.Tests

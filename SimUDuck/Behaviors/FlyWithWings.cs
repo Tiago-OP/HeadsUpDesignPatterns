@@ -1,6 +1,6 @@
 ﻿using SimUDuck.Wrappers;
 
-namespace SimUDuck.Behaviours
+namespace SimUDuck.Behaviors
 {
     public class FlyNoWay : IFlyBehaviour
     {
@@ -8,11 +8,6 @@ namespace SimUDuck.Behaviours
         public FlyNoWay(IOutput customOutput)
         {
             _output = customOutput;
-        }
-
-        public FlyNoWay()
-        {
-            _output = new ConsoleWrapper();
         }
 
         public void Fly()

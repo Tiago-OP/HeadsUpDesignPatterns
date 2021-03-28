@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Moq;
-using SimUDuck.Behaviours;
 using SimUDuck.Wrappers;
 
 namespace SimUDuck.Tests
@@ -45,6 +44,17 @@ namespace SimUDuck.Tests
             duck.Fly();
 
             consoleMock.Verify(w => w.Write(It.Is<string>(s => s == "I'm flying!!")));
+        }
+
+        [Test]
+        public void DuckCall()
+        {
+            var consoleMock = new Mock<IOutput>();
+            var duck= new MallardDuck(consoleMock.Object);
+
+            duck.DuckCall();
+
+            consoleMock.Verify(w => w.Write(It.Is<string>(s => s == "Mallard Mallard Mallard")));
         }
     }
 }

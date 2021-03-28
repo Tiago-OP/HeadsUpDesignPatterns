@@ -1,6 +1,6 @@
 ﻿using SimUDuck.Wrappers;
 
-namespace SimUDuck.Behaviours
+namespace SimUDuck.Behaviors
 {
     public class FlyRocketPowered : IFlyBehaviour
     {
@@ -8,11 +8,6 @@ namespace SimUDuck.Behaviours
         public FlyRocketPowered(IOutput customOutput)
         {
             _output = customOutput;
-        }
-
-        public FlyRocketPowered()
-        {
-            _output = new ConsoleWrapper();
         }
 
         public void Fly()

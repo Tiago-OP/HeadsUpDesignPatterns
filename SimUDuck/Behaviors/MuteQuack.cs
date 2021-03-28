@@ -1,15 +1,11 @@
 ﻿using SimUDuck.Wrappers;
 
-namespace SimUDuck.Behaviours
+namespace SimUDuck.Behaviors
 {
     public class NormalQuack : IQuackBehaviour
     {
         private readonly IOutput _output;
 
-        public NormalQuack()
-        {
-            _output = new ConsoleWrapper();
-        }
         public NormalQuack(IOutput output)
         {
             _output = output;
