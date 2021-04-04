@@ -12,6 +12,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SymUDuck", "SymUDuck", "{9D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimUDuck.Tests", "SimUDuck.Tests\SimUDuck.Tests.csproj", "{B9DB83FC-6BDC-4780-A549-2FDA6902FF99}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30E0F28E-CA5E-4DBE-BB5C-8055F0A8E4FC}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Weather-O-Rama", "Weather-O-Rama", "{2306CBA0-FC61-472B-8011-04691D25760F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather-O-Rama", "Weather-O-Rama\Weather-O-Rama.csproj", "{E56B8ADF-AE43-4559-AEC8-82787B633C26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +35,10 @@ Global
 		{B9DB83FC-6BDC-4780-A549-2FDA6902FF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9DB83FC-6BDC-4780-A549-2FDA6902FF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9DB83FC-6BDC-4780-A549-2FDA6902FF99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E56B8ADF-AE43-4559-AEC8-82787B633C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56B8ADF-AE43-4559-AEC8-82787B633C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56B8ADF-AE43-4559-AEC8-82787B633C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56B8ADF-AE43-4559-AEC8-82787B633C26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FAC34629-3330-4910-BA87-DFEDE3E8611B} = {9DC80398-AB37-4DD4-8D9F-BBBF1F1BDB05}
 		{B9DB83FC-6BDC-4780-A549-2FDA6902FF99} = {9DC80398-AB37-4DD4-8D9F-BBBF1F1BDB05}
+		{E56B8ADF-AE43-4559-AEC8-82787B633C26} = {2306CBA0-FC61-472B-8011-04691D25760F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CAD8F9C9-AFC4-42C4-8843-AB9392BAD748}

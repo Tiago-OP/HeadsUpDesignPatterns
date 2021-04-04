@@ -8,7 +8,11 @@ clients that use it.
 **Design Principle:**
 	Favor composition over inheritance
 
-Instead of inherating the the fly and quack behaviours from the parent abstract class, we compose them by creating a behaviour object.
+
+Family of algorithms - types of behaviours
+Behaviour encapsulated inside the abstract class
+Those behaviours are set by the consumer, allowing flexibility. 
+
 
 This give us flexibility to change the behaviour dynamically, to add new behaviours without breaking old ones.
 
