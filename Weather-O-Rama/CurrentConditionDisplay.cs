@@ -11,21 +11,23 @@ namespace Weather_O_Rama
     {
         public float _temp;
         public float _hum;
-
+        private WeatherData _weatherData;
         private IOutput _console;
 
-        public CurrentConditionDisplay(IOutput console)
+        public CurrentConditionDisplay(IOutput console, WeatherData weatherData)
         {
             _console = console;
+            _weatherData = weatherData;
+            weatherData.RegisterObserver(this);
         }
         public CurrentConditionDisplay()
         {
             _console = new ConsoleWrapper();
         }
-        public void Update(float temp, float humidity, float pressure)
+        public void Update()
         {
-            _temp = temp;
-            _hum = humidity;
+            _temp = _weatherData.Temp;
+            _hum = _weatherData.Humidity;
             Display();
         }
 

@@ -19,8 +19,7 @@ namespace Weather_O_Rama.Tests
             var weather = new WeatherData();
             var consoleMock = new Mock<IOutput>();
 
-            var display = new CurrentConditionDisplay(consoleMock.Object);
-            weather.RegisterObserver(display);
+            var display = new CurrentConditionDisplay(consoleMock.Object, weather);
             weather.UpdateValues(1,12,123);
             
             weather.NotifyObserver();

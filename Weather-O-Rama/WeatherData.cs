@@ -6,15 +6,15 @@ namespace Weather_O_Rama
     public class WeatherData: ISubject
     {
         private List<IObserver> _observers;
-        private float _humidity;
-        private float _pressure;
-        private float _temp;
+        public float Humidity { get; private set; }
+        public float Pressure { get; private set; }
+        public float Temp { get; private set; }
 
         public void UpdateValues(float temperature, float humidity, float pressure)
         {
-            _temp = temperature;
-            _humidity = humidity;
-            _pressure = pressure;
+            Temp = temperature;
+            Humidity = humidity;
+            Pressure = pressure;
         }
         public WeatherData()
         {
@@ -30,7 +30,7 @@ namespace Weather_O_Rama
         }
         public void NotifyObserver()
         {
-            _observers.ForEach(x=>x.Update(_temp, _humidity, _pressure));
+            _observers.ForEach(x=>x.Update());
         }
     }
 }
