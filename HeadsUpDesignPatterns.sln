@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Weather-O-Rama", "Weather-O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather-O-Rama", "Weather-O-Rama\Weather-O-Rama.csproj", "{E56B8ADF-AE43-4559-AEC8-82787B633C26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather-O-Rama.Tests", "Weather-O-Rama.Tests\Weather-O-Rama.Tests.csproj", "{9EBCE59C-B8DC-4B7A-AF09-862B48C7D00F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E56B8ADF-AE43-4559-AEC8-82787B633C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E56B8ADF-AE43-4559-AEC8-82787B633C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E56B8ADF-AE43-4559-AEC8-82787B633C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EBCE59C-B8DC-4B7A-AF09-862B48C7D00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EBCE59C-B8DC-4B7A-AF09-862B48C7D00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EBCE59C-B8DC-4B7A-AF09-862B48C7D00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EBCE59C-B8DC-4B7A-AF09-862B48C7D00F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
